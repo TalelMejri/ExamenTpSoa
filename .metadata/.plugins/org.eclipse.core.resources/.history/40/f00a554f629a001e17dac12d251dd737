@@ -1,0 +1,19 @@
+package org.dsi.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.Data;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PhotoEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String name;
+	private double price;
+	
+}

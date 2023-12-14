@@ -1,0 +1,7 @@
+package org.dsi.entity;
+
+public class Photo {
+	private Long id;
+	private String dateCreation;
+	private String dateModification;
+}

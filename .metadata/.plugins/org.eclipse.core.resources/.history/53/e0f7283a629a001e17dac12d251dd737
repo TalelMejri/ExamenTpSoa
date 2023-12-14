@@ -1,0 +1,7 @@
+package org.dsi.entity;
+
+
+
+public class PhotoEntity {
+
+}

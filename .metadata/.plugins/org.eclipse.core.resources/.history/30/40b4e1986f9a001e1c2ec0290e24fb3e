@@ -1,0 +1,39 @@
+package org.dsi.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.dsi.entity.Album;
+import org.dsi.entity.Photo;
+import org.dsi.repo.AlbumRepo;
+import org.dsi.service.feignservice;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sun.org.apache.bcel.internal.generic.LSTORE;
+
+@RestController
+@RequestMapping("/allAlbum")
+public class AlbumController {
+	
+	@Autowired
+	AlbumRepo AlbumRepo;
+	
+	@Autowired
+	feignservice photoservice;
+
+	@GetMapping
+	public List<Album> getAlum() {
+		List<Photo> listpoto=photoservice.getAll();
+		Album album=new Album();
+		album.setTitre("album1");
+		System.out.println(listpoto);
+		album.setPhotos(listpoto);
+		AlbumRepo.save(album);
+		//AlbumRepo.save(album);
+		return AlbumRepo.findAll();
+	}
+}

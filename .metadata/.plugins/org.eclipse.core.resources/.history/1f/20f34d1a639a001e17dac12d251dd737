@@ -1,0 +1,25 @@
+package org.dsi;
+
+import org.dsi.repo.photoRepo;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ServiceNonSecuriseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServiceNonSecuriseApplication.class, args);
+	}
+	
+	@Bean
+	CommandLineRunner start(photoRepo productRepository)
+	{
+		return args->{
+			productRepository.save(new Product(null,"pc",1.5));
+			productRepository.save(new Product(null,"clavier",1.5));
+			productRepository.save(new Product(null,"souris",1.5));
+			productRepository.findAll().forEach(System.out::println);
+		};
+	}
+
+}

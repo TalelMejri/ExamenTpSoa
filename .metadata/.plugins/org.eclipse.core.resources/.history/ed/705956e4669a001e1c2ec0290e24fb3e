@@ -1,0 +1,48 @@
+package org.dsi;
+
+
+import java.util.ArrayList;
+
+import org.dsi.entity.Album;
+import org.dsi.repo.AlbumRepo;
+import org.dsi.service.feignservice;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
+
+@EnableFeignClients
+@SpringBootApplication
+public class ServiceSecuriseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServiceSecuriseApplication.class, args);
+	}
+
+	@Bean
+	CommandLineRunner start(AlbumRepo AlbumRepo,feignservice photoService)
+	{
+
+			return args -> {
+				Album album=new Album();
+				album.setTitre("ALbum1");
+				
+		        inventoryServiceClient.findAll().getContent().forEach(p -> {
+		        	ProductItem prod=new ProductItem();
+					Product ProdItemNew=new Product();
+					ProdItemNew.setName(p.getName());
+					ProdItemNew.setPrice(p.getPrice());
+					ProdItemNew.setId(p.getId());
+					prod.setProduct(ProdItemNew);
+					prod.setBill(null);
+					prod.setQuantity((int)(1+Math.random()*1000));
+					prod.setPrice(p.getPrice());
+					prod.setProductID(p.getId());
+					  System.out.println("2222222222222222222222222222222222222222222222222222222");
+					productItemRepository.save(prod);
+				});
+			};
+
+	}
+}

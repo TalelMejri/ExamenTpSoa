@@ -1,0 +1,10 @@
+package org.dsi.entity;
+
+
+/*
+@Projection(name = "fullPhoto",types = PhotoEntity.class)
+public interface photoproj {
+	public  Long getId();
+	public String getDateCreation();
+	public String getDateModification();
+}*/

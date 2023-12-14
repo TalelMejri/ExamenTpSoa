@@ -1,0 +1,4 @@
+server.port=8070
+spring.application.name=service-non-securise
+spring.cloud.discovery.enabled=true
+//eureka.client.service-url.defaultZone=http://localhost:8091/eureka

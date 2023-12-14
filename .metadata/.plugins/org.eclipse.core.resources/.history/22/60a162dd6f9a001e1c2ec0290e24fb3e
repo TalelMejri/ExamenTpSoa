@@ -1,0 +1,10 @@
+package org.dsi.sec;
+@Controller
+public class secontroller {
+	@GetMapping("/logout")
+    public String logout(HttpServletRequest request) throws ServletException{
+request.logout();
+return "redirect:/";
+}
+}
+

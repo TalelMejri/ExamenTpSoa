@@ -1,0 +1,7 @@
+package org.dsi.entity;
+@Projection(name = "fullInventory",types = Product.class)
+public class photoproj {
+	public Long getId();
+	public String getName();
+	public double getPrice();
+}

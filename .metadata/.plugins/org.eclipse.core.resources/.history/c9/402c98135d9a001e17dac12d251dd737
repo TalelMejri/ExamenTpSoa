@@ -1,0 +1,7 @@
+server.port=8079
+spring.datasource.url=jdbc:h2:mem:products-db
+
+
+logging.level.org.springframework.security=DEBUG
+
+

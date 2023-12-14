@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;service-securisé&apos;&#x0D;&#x0A;- Original project: &apos;service-securisé&apos;&#x0D;&#x0A;- Original element: &apos;org.dsi.service.servicenonsecurise.java&apos;" description="Delete element" element1="/src\/main\/java&lt;org.dsi.service{servicenonsecurise.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1702543666327" subPackages="false" version="1.0"/>&#x0A;&#x0A;&#x0A;</session>

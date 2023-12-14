@@ -1,0 +1,8 @@
+package org.dsi.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="inventory-service")
+public class servicenonsecurise {
+
+}

@@ -1,0 +1,10 @@
+package org.dsi.entity;
+
+import org.springframework.data.rest.core.config.Projection;
+
+@Projection(name = "fullPhoto",types = Product.class)
+public class photoproj {
+	public Long getId();
+	public String getName();
+	public double getPrice();
+}

@@ -1,0 +1,7 @@
+package org.dsi.service;
+
+
+@FeignClient(name="inventory-service")
+public class servicenonsecurise {
+
+}

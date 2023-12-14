@@ -1,0 +1,3 @@
+spring.application.name=service-non-securise
+spring.cloud.discovery.enabled=true
+server.port=8888

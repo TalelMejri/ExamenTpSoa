@@ -1,0 +1,4 @@
+package org.dsi.entity;
+
+import org.springframework.data.rest.core.config.Projection;
+
